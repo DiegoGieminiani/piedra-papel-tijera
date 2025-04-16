@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✂️ Piedra Papel o Tijera</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="logo"></div>
+    <h1>Piedra, Papel o Tijera</h1>
+
+    <div class="game">
+      <div class="choices">
+        <button class="choice" data-choice="piedra">🪨 Piedra</button>
+        <button class="choice" data-choice="papel">📄 Papel</button>
+        <button class="choice" data-choice="tijera">✂️ Tijera</button>
+      </div>
+
+      <div class="result">
+        <p id="user-choice">Tú elegiste: -</p>
+        <p id="computer-choice">La máquina eligió: -</p>
+        <h2 id="winner" class="neutral">¿Quién gana?</h2>
+      </div>
+
+      <div class="scoreboard">
+        <p>Ganadas: <span id="wins">0</span></p>
+        <p>Perdidas: <span id="losses">0</span></p>
+        <p>Empates: <span id="draws">0</span></p>
+        <button id="reset-btn">🔁 Reiniciar contador</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

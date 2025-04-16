@@ -1,0 +1,6 @@
+# MacOS
+.DS_Store
+
+# Node (por si más adelante agregás)
+node_modules/
+.env

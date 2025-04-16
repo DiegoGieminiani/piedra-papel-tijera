@@ -1,0 +1,85 @@
+body {
+  font-family: 'Fredoka', sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: #eaf6ff;
+  color: #333;
+}
+
+.logo {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.game {
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.choices button {
+  margin: 10px;
+  padding: 14px 24px;
+  font-size: 25px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: #f0f4f8;
+  transition: all 0.3s ease;
+}
+
+.choices button:hover {
+  background-color: #cfe8fc;
+  transform: scale(1.05);
+}
+
+.result, .scoreboard {
+  margin-top: 25px;
+}
+
+#user-choice,
+#computer-choice {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #444;
+}
+#winner {
+  margin-top: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Colores dinámicos */
+.winner {
+  color: #2e7d32; /* verde */
+}
+.loser {
+  color: #c62828; /* rojo */
+}
+.neutral {
+  color: #666; /* gris */
+}
+
+#reset-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#reset-btn:hover {
+  background-color: #d3d3d3;
+}
