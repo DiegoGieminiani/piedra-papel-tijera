@@ -1,4 +1,4 @@
-# ✋ Piedra, Papel o Tijera ✌️
+#  Piedra, Papel o Tijera ✌
 
 Pequeño juego interactivo hecho con **HTML, CSS y JavaScript**, utilizando animaciones ligeras de elementos con **Anime.js** y **tsParticles** con el **preset "fountain"** para animaciones de partículas.
 
