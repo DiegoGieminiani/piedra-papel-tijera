@@ -1,0 +1,249 @@
+/* ===== Estilos base ===== */
+body {
+  font-family: "Fredoka", sans-serif;
+  text-align: center;
+  padding: 45px;
+  background-color: #eaf6ff;
+  color: #333;
+}
+
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ===== Encabezado: logo y título ===== */
+.logo-img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 7px;
+  align-items: center;
+}
+
+.encabezado h1 {
+  font-size: 32px;
+  margin: 12px 0 0 0;
+  font-weight: 600;
+  color: #222;
+}
+
+/*  Contenedor principal */
+.game {
+  max-width: 420px;
+  margin: 30px auto 0;
+  padding: 40px 30px;
+  border-radius: 12px;
+  background-color: rgba(170, 255, 195, 0.65); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/*  Indicadores superiores */
+.modo-juego {
+  font-size: 19px;
+  color: #444;
+  padding: 0px;
+  margin: 0px;
+  font-weight: 500;
+  gap: 20px;
+}
+
+.inicio {
+  font-size: 16px;
+  color: #555;
+  opacity: 0;
+  padding: 1px;
+  transition: opacity 0.5s ease;
+  font-weight: 500;
+  margin: 0;
+}
+
+.inicio.visible {
+  opacity: 3;
+  transform: scale(1);
+  transition: all 1.5s ease;
+}
+
+/*  Botones de opciones  */
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 23px;
+}
+
+.choices button {
+  padding: 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.choices button:hover {
+  background-color: transparent;
+  transform: scale(1.3);
+}
+
+.icono {
+  width: 70px;
+  height: 70px;
+}
+
+/*  Resultado  */
+.elecciones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.elecciones p {
+  margin: 0;
+  font-size: 16px;
+  color: #444;
+}
+#user-choice {
+  color: #1e88e5; /* azul para el jugador */
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#computer-choice {
+  color: #e53935; /* rojo para la máquina */
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#winner {
+  margin-top: 15px;
+  margin-bottom: 12px;
+  font-size: 36px;
+  font-weight: bold;
+  transition: color 0.6s ease;
+}
+#winner.neutral {
+  color: #2a9d8f;
+}
+
+.winner {
+  color: #2e7d32;
+}
+.looser {
+  color: #c62828;
+}
+.draws {
+  color: #f9a825;
+}
+
+/*Marcador */
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.marcadores {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.marcadores p {
+  margin-b: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+#wins {
+  color: #2e7d32; /* Verde */
+  font-weight: bold;
+}
+
+#looses {
+  color: #c62828; /* Rojo */
+  font-weight: bold;
+}
+
+#draws {
+  color: #f9a825; /* Amarillo mostaza */
+  font-weight: bold;
+}
+
+/* ===== Botón Reiniciar ===== */
+/* ===== Botón Reiniciar Único (con ícono o texto) ===== */
+.boton-reiniciar {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#reset-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 16px;
+  background-color: #;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  width: 72px;
+  height: 72px;
+}
+
+#reset-btn:hover {
+  box-shadow: 0 5px 15px rgba(0, 1, 0, 0.9);
+  transition: all 0.5s ease;
+}
+/* Imagen dentro del botón */
+.restart-icon {
+  width: 74px;
+  height: 74px;
+  align-items: center;
+  margin-left: -9px;
+}
+
+#reset-btn.resaltar {
+  animation: resaltarBoton 0.5s ease-in;
+  transform: scale(1.1);
+}
+#reset-btn:hover .restart-icon {
+  transform: scale(1.1);
+}
+
+.fin {
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.5s ease;
+}
+
+.fin.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fin.oculto {
+  display: none;
+}
+
+#mensaje-final {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px auto;
+  max-width: 300px;
+  color: #333;
+}

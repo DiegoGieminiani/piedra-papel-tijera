@@ -1,6 +1,9 @@
 # MacOS
 .DS_Store
 
-# Node (por si más adelante agregás)
+# Node.js 
 node_modules/
 .env
+
+# VSCode settings personales
+.vscode/

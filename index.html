@@ -3,35 +3,99 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>✂️ Piedra Papel o Tijera</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
+    <title>Piedra Papel o Tijera</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="logo"></div>
-    <h1>Piedra, Papel o Tijera</h1>
+    <!-- Fondo animado en el body -->
+    <div id="tsparticles"></div>
 
+    <!-- Logo y título fuera del contenedor -->
+    <div class="encabezado">
+      <div class="logo">
+        <img
+          src="assets/icons/logo.png"
+          alt="Logo del juego"
+          class="logo-img"
+        />
+      </div>
+      <h1>Piedra, Papel o Tijera</h1>
+    </div>
+
+    <!-- Contenedor principal del juego -->
     <div class="game">
+      <p class="modo-juego">Mejor de 5 - ¡Gana quien llegue a 3!</p>
+      <p id="mensaje-inicio" class="inicio">
+        El juego ha comenzado, elegí una opción...
+      </p>
+
+      <!-- Botones con íconos -->
       <div class="choices">
-        <button class="choice" data-choice="piedra">🪨 Piedra</button>
-        <button class="choice" data-choice="papel">📄 Papel</button>
-        <button class="choice" data-choice="tijera">✂️ Tijera</button>
+        <button class="choice" data-choice="piedra">
+          <img src="assets/icons/rock.png" alt="Piedra" class="icono" />
+        </button>
+        <button class="choice" data-choice="papel">
+          <img src="assets/icons/paper.png" alt="Papel" class="icono" />
+        </button>
+        <button class="choice" data-choice="tijera">
+          <img src="assets/icons/scissors.png" alt="Tijera" class="icono" />
+        </button>
       </div>
 
-      <div class="result">
-        <p id="user-choice">Tú elegiste: -</p>
-        <p id="computer-choice">La máquina eligió: -</p>
-        <h2 id="winner" class="neutral">¿Quién gana?</h2>
+      <!-- Resultado del juego -->
+      <div class="elecciones">
+        <p id="user-choice">Jugador : </p>
+        <p id="computer-choice">Máquina : </p>
       </div>
 
+      <h2 id="winner" class="neutral">¿Quién gana?</h2>
+
+      <!--Marcador -->
       <div class="scoreboard">
-        <p>Ganadas: <span id="wins">0</span></p>
-        <p>Perdidas: <span id="losses">0</span></p>
-        <p>Empates: <span id="draws">0</span></p>
-        <button id="reset-btn">🔁 Reiniciar contador</button>
+        <div class="marcadores">
+          <p>Ganadas: <span id="wins">0</span></p>
+          <p>Perdidas: <span id="looses">0</span></p>
+          <p>Empates: <span id="draws">0</span></p>
+        </div>
+        <div id="fin-partida" class="fin oculto">
+          <p id="mensaje-final"></p>
+        </div>
+        <!-- Botón único de reinicio -->
+        <div class="boton-reiniciar">
+          <button id="reset-btn" class="restart-btn">
+            <img
+              src="assets/icons/play.png"
+              alt="Reiniciar"
+              class="restart-icon"
+            />
+          </button>
+        </div>
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Librerías de animaciones -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+    <!-- tsParticles + preset fountain -->
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-fountain@3/tsparticles.preset.fountain.bundle.min.js"></script>
+
+    <!-- Inicialización de tsParticles -->
+    <script>
+      (async () => {
+        await loadFountainPreset(tsParticles);
+        await tsParticles.load({
+          id: "tsparticles",
+          options: {
+            preset: "fountain",
+          },
+        });
+      })();
+    </script>
+
+  <script src="./js/script.js"></script>  
   </body>
 </html>
